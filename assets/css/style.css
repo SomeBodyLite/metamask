@@ -466,6 +466,14 @@ img {
   justify-content: space-between;
 }
 
+.connect-buttons {
+  width: 47%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .connect-buttons a {
   text-decoration: none;
   display: inline-block;
@@ -483,11 +491,12 @@ img {
   line-height: 38px;
   text-transform: uppercase;
   color: #000000;
+  margin: 4px;
 }
 
-.connect-buttons a:first-child {
+/* .connect-buttons a:first-child {
   margin-right: 30px;
-}
+} */
 
 .out-gold {
   border: 3px solid transparent;
