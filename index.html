@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap-grid.min.css" />
+    <meta name="theme-color" content="#1f1f1d" />
+    <meta name="msapplication-navbutton-color" content="#1f1f1d" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1f1f1d" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <title>Metamask</title>
@@ -161,7 +164,7 @@
       <div class="container">
         <div class="row">
           <div class="connect-container">
-            <div class="connect-block">
+            <div class="connect-block state-1">
               <h1 class="connect-text gold">
                 Connect the Metamask wallet and get your prize
               </h1>
@@ -171,14 +174,27 @@
                 </a>
                 <a
                   href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn"
-                  target="_blank
-                  "
+                  target="_blank"
                 >
                   <button class="connect-button out-gold">
                     <span>Create wallet</span>
                   </button>
                 </a>
               </div>
+            </div>
+            <div class="connect-block state-2 disable">
+              <h1 class="connect-text gold">
+                Almost done... <br />
+                Let's get involved.
+              </h1>
+              <div class="connect-buttons">
+                <a href="#">
+                  <button class="connect-button gold-button">Take part</button>
+                </a>
+              </div>
+            </div>
+            <div class="connect-block state-3 disable">
+              <h1 class="connect-text gold">Successful participation!</h1>
             </div>
           </div>
         </div>

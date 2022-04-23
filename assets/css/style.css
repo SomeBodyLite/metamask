@@ -483,6 +483,10 @@ img {
   border-image-slice: 1;
 }
 
+.annotation {
+  display: none;
+}
+
 .connect-block {
   padding: 5.875rem 3.6875rem;
   background: rgba(19, 17, 26, 0.32);
@@ -526,6 +530,34 @@ img {
 } */
 .gold-button {
   background: linear-gradient(94.55deg, #F4E07F 4.8%, #E1A93C 59.45%, #F4E07F 94.98%);
+}
+
+.disable {
+  display: none;
+}
+
+.state-2 .connect-buttons {
+  justify-content: center;
+}
+
+.state-2 .connect-text {
+  font-size: 3.3rem;
+  line-height: 4.1rem;
+}
+
+.state-2.connect-block {
+  padding: 4.875rem 3.6875rem;
+}
+
+.state-3.connect-block {
+  padding: 7.430rem 4.688rem;
+}
+
+.state-3 .connect-text {
+  max-width: none;
+  text-align: center;
+  width: -moz-available;
+  width: -webkit-fill-available;
 }
 
 .out-gold {
