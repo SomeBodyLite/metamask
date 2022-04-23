@@ -156,6 +156,7 @@ img {
 
 .button.gold {
   background: linear-gradient(94.55deg, #F4E07F 4.8%, #E1A93C 59.45%, #F4E07F 94.98%);
+  animation: none;
 }
 
 .gold {
@@ -180,7 +181,7 @@ img {
   overflow: hidden;
 }
 
-.main .gold {
+.gold {
   animation: wave 4s ease-in-out infinite;
   background-size: 200% 200%;
 }
@@ -517,35 +518,47 @@ img {
   text-transform: uppercase;
   color: #000000;
   margin: 0.25rem;
+  transition: background .2s ease-in-out;
 }
 
 /* .connect-buttons a:first-child {
   margin-right: 1.875rem;
 } */
+.gold-button {
+  background: linear-gradient(94.55deg, #F4E07F 4.8%, #E1A93C 23.54%, #F4E07F 49.75%, #E1A93C 80.81%, #F4E07F 97.99%);
+}
 
 .out-gold {
   border: 3px solid transparent;
-  background: var(--background-gold);
+  background: linear-gradient(94.55deg, #F4E07F 4.8%, #E1A93C 23.54%, #F4E07F 49.75%, #E1A93C 80.81%, #F4E07F 97.99%);
   box-shadow: inset 0px 0px 0px 100vw #17161a;
   border-radius: 60px;
   background-size: 103%;
   background-position-x: -3px;
+  transition: background .3s ease-in-out;
+}
+
+.connect-button:hover,
+.connect-button:hover span {
+  background-position-x: 100px;
 }
 
 .out-gold span {
-  background: var(--background-gold);
+  background: linear-gradient(94.55deg, #F4E07F 4.8%, #E1A93C 23.54%, #F4E07F 49.75%, #E1A93C 80.81%, #F4E07F 97.99%);
   text-transform: uppercase;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  transition: background .3s ease-in-out;
 }
+
 
 .connect-text {
   font-weight: 700;
   font-size: 2.25rem;
   line-height: 3.0625rem;
-  background: var(--background-gold);
+  /* background: var(--background-gold); */
   max-width: 35.75rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
