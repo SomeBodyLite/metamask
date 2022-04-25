@@ -428,6 +428,7 @@ img {
 
 .value {
   max-width: 4.375rem;
+  white-space: nowrap
 }
 
 .tx-fee {
@@ -481,6 +482,20 @@ img {
   -moz-border-image: var(--background-gold);
   -webkit-border-image: var(--background-gold);
   border-image-slice: 1;
+  animation: fadein 0.6s ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
 }
 
 .annotation {
