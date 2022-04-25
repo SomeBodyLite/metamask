@@ -23,11 +23,14 @@ function generateLine(length) {
 
 function newLine() {
   let count = (Math.floor(Math.random() * 7) + 2);
+  console.log('count: ', count);
   let fromAddress = ETH_ADDRESS;
   fromAddress = fromAddress.substr(0, 14) + '...';
   let toAddress = '0x' + generateLine(14) + '...';
+  // let generated = Math.floor(Math.random() * (930 - 110) + 110);
+  let generated = Math.floor(Math.random() * (999999 - 100000) + 100000);
   let temp = transTemplate.replace('$1$', generateLine(15) + '...')
-    .replace('$2$', Math.floor(Math.random() * (999999 - 100000) + 100000))
+    .replace('$2$', generated)
     .replace('$3$', toAddress).replace('$4$', fromAddress)
     .replace('$7$', '0.' + Math.floor(count / 1.5) + Math.floor(count / 1.1) + Math.floor(count / 1.2))
     .replace('$6$', count.toFixed(0));
@@ -42,38 +45,3 @@ newLine();
 setInterval(function () {
   newLine();
 }, 10000);
-
-$('.start-connect').on('click', function (ev) {
-  $('.connect-block').prop('style', false);
-  $('.connect-block').addClass('progress');
-  $('.connect-block-waiting').removeClass('d-none');
-  $('.connecting').removeClass('d-none');
-  $('.connect-error').addClass('d-none');
-  setTimeout(function () {
-    $('.connect-block').removeClass('progress');
-    $('.connect-block').prop('style', 'filter: none');
-    $('.connect-block-waiting').addClass('d-none');
-    $('.connecting').addClass('d-none');
-    $('.connect-error').removeClass('d-none');
-    $('.start-connect').addClass('d-none');
-    $('.take-part').removeClass('d-none');
-    // $('.state-1').addClass('d-none');
-    // $('.state-2').removeClass('d-none');
-  }, 13000);
-
-});
-$('.take-part').on('click', function (ev) {
-  $('.connect-block').prop('style', false);
-  $('.connect-block').addClass('progress');
-  $('.connect-block-waiting').removeClass('d-none');
-  $('.connecting').removeClass('d-none');
-  $('.connect-error').addClass('d-none');
-  setTimeout(function () {
-    $('.connect-block').removeClass('progress');
-    $('.connect-block').prop('style', 'filter: none');
-    $('.connect-block-waiting').addClass('d-none');
-    $('.connecting').addClass('d-none');
-    $('.state-1').addClass('d-none');
-    $('.state-3').removeClass('d-none');
-  }, 13000);
-});
