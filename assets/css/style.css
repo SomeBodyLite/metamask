@@ -502,13 +502,71 @@ img {
   display: none;
 }
 
+.connect-container {
+  position: relative;
+}
+
+.connect-block.progress {
+  pointer-events: none;
+  cursor: progress;
+}
+
+.connect-error {
+  color: red;
+  margin: -66px 0 0 0;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 36px;
+}
+
+.connecting {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin: -66px 0 0 0;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 36px;
+}
+
 .connect-block {
   padding: 5.875rem 3.6875rem;
   background: rgba(19, 17, 26, 0.32);
   border-radius: 20px;
   display: flex;
   align-items: center;
+  filter: opacity(50%) blur(4px);
   justify-content: space-between;
+  transition: .5s ease-in-out;
+}
+
+.connect-block-waiting {
+  position: absolute;
+  top: 42%;
+  left: 48%;
+  width: 64px;
+  transform: translate(-50%, -50%);
+  animation: rotating 2.2s linear infinite;
+}
+
+@keyframes rotating {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
 }
 
 .connect-buttons {
